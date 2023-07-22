@@ -1,13 +1,223 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #242121;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #292828;
+    ;
+    padding: 5px 15px;
+}
+.navbar > div{
+    cursor: pointer;
+}
+.logo-div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.search-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 42rem;
+    margin: 0 25px;
+}
+.input-div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #494949;
+    flex-grow: 1;
+    padding: 4px 8px;
+}
+.input-div input{
+    background-color: #494949;
+    border: none;
+    outline: none;
+    color: white;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 14px;
+}
+.search-div button{
+    background-color: #373737;
+    color: #777777;
+    cursor: pointer;
+    padding: 6px 18px;
+    border: 1px solid #777777;
+}
+.icons-div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.profile-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-book{
+    margin: 4rem;
+    min-height: 200px;
+}
+
+.show-books{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+}
+.show-books > div{
+    min-width: 30%;
+    height: 210px;
+}
+.show-desc{
+    padding: 5px;
+    padding-left: 35px;
+}
+.show-books .show-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.show-books .description{
+    padding: 20px;
+    width: 380px;
+    height: 100px;
+    overflow: hidden;
+}
+.nowread-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.book-details, .show-details{
+    display: flex;
+    background-color: #415F71;
+    color: white;
+}
+.book-details .book-img, .show-details .show-img{
+    width: 145px;
+    height: 180px;
+    transform: rotateZ(-5deg);
+    scale: 1.2;
+    border-right: 10px solid white;
+}
+.book-img img, .show-img img{
+    width: 100%;
+    height: 100%;
+}
+.show-details .show-img{
+    height: 200px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 30px 20px 30px 60px;
+}
+.details .title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.details .authors{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.book-ratings{
+    display: flex;
+    flex-wrap: wrap;
+}
+.book-ratings > div{
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #8fa0ac;
+}
+.published{
+    padding: 20px;
+    padding-top: 40px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #aec0cc  ;
+}
+.published button, .show-books button{
+    border: none;
+    padding: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+.books-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    overflow-y: scroll;
+}
+.books-container::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+.books-container::-webkit-scrollbar-thumb {
+    background-color: #c6c5c5 ; 
+    border-radius: 10px;
+}
+.books-container h1{
+    margin-bottom: 20px;
+    color: white;
+}
+.books{
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    gap: 3.4rem;
+    
+}
+
+.book{
+    width: 145px;
+    height: 200px;
+    cursor: pointer;
+    background-color: rgb(255, 145, 0);
+}
+.book:hover{
+    scale: 1.1;
+}
+.unavailable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.img-div{
+    width: 100%;
+    height: 100%;
+}
+.img-div img{
+    width: 100%;
+    height: 100%;
 }
