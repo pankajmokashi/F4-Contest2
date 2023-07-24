@@ -34,7 +34,7 @@ const App = () => {
       .then((data) => {
         setBookData(data.items);
       })
-      .catch((error) => console.error('Error fetching Sherlock Holmes data:', error));
+      .catch((error) => console.error('Error fetching searched string:', error));
     }
   }, [searchString])
 
