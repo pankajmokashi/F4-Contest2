@@ -34,11 +34,7 @@ const App = () => {
       .then((data) => {
         setBookData(data.items);
       })
-<<<<<<< HEAD
       .catch((error) => console.error('Error fetching ' + searchString + ' data:', error));
-=======
-      .catch((error) => console.error('Error fetching searched string:', error));
->>>>>>> 4b28a547c25937e431a762d4a4609430ceda4eda
     }
   }, [searchString])
 
