@@ -6,24 +6,24 @@ import { ReactComponent as BellIcon } from "./../Styles/BellIcon.svg";
 import { ReactComponent as PremiumIcon } from "./../Styles/PremiunIcon.svg";
 import { ReactComponent as Profile } from "./../Styles/Profile.svg";
 import { useState } from "react";
-//import {ReactComponent as Arrow} from "./../Styles/Arrow.svg"
+//import {ReactComponent as Arrow} from "./../Styles/Arrow.svg";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = ({changeState}) => {
 
   let [str, setStr] = useState("")
 
   function setString(event){
-    console.log(str)
     changeState(str)
   } 
  
   return (
     <div className="navbar">
       <div className="logo-div">
-        <div>
+        <div className="logo1">
           <Logo />
         </div>
-        <div>
+        <div className="logo2">
           <KeazonBooks />
         </div>
       </div>
@@ -61,6 +61,9 @@ const Navbar = ({changeState}) => {
                 <Arrow />
             </div> */}
         </div>
+      </div>
+      <div className="menu-icon">
+        <AiOutlineMenu />
       </div>
     </div>
   );
